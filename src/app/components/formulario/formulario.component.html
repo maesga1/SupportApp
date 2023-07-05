@@ -1,0 +1,27 @@
+<form (ngSubmit)="submitForm()">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="formData.nombre" required>
+    </div>
+  
+    <div>
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" [(ngModel)]="formData.fecha" required>
+    </div>
+  
+    <div>
+      <label for="tema">Tema:</label>
+      <select id="tema" name="tema" [(ngModel)]="formData.tema" required>
+        <option value="" disabled selected>Seleccione un tema</option>
+        <option *ngFor="let tema of temas" [value]="tema">{{ tema }}</option>
+      </select>
+    </div>
+  
+    <div>
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" [(ngModel)]="formData.descripcion" required></textarea>
+    </div>
+  
+    <button type="submit">Enviar</button>
+  </form>
+  
