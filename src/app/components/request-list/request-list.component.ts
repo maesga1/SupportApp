@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { Request } from '';
-import { SolicitudService } from '../solicitud.service';
+import { Request } from 'src/models/request.model';
+import { RequestService } from 'src/services/request.service';
 
 @Component({
-  selector: 'app-solicitudes-listado',
-  templateUrl: './solicitudes-listado.component.html',
-  styleUrls: ['./solicitudes-listado.component.scss']
+  selector: 'app-requests-list',
+  templateUrl: './request-list.component.html',
+  styleUrls: ['./request-list.component.scss']
 })
-export class SolicitudesListadoComponent implements OnInit {
-  solicitudes: Solicitud[];
+export class RequestsListComponent implements OnInit {
+  solicitudes: Request[] = [];
 
-  constructor(private solicitudService: SolicitudService) { }
+  constructor(private requestService: RequestService) { }
 
   ngOnInit() {
-    this.solicitudes = this.solicitudService.getSolicitudes();
+    this.solicitudes = this.requestService.getSolicitudes();
+  }
+
+  editSolicitud(id: number) {
+    console.log(`Editar solicitud con ID ${id}`);
   }
 }
