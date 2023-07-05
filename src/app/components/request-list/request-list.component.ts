@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Solicitud } from '../solicitud.model';
+import { Request } from '';
 import { SolicitudService } from '../solicitud.service';
 
 @Component({
