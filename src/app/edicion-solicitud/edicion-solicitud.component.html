@@ -1,0 +1,30 @@
+<h1>Edición de solicitud</h1>
+
+<form (ngSubmit)="guardarCambios()" #formulario="ngForm">
+  <div class="form-group">
+    <label for="nombreSolicitante">Nombre del solicitante</label>
+    <input type="text" id="nombreSolicitante" class="form-control" required
+           [(ngModel)]="solicitud.nombreSolicitante" name="nombreSolicitante">
+  </div>
+
+  <div class="form-group">
+    <label for="fechaSolicitud">Fecha de la solicitud</label>
+    <input type="date" id="fechaSolicitud" class="form-control" required
+           [(ngModel)]="solicitud.fechaSolicitud" name="fechaSolicitud">
+  </div>
+
+  <div class="form-group">
+    <label for="temaConsulta">Tema de la consulta</label>
+    <input type="text" id="temaConsulta" class="form-control" required
+           [(ngModel)]="solicitud.temaConsulta" name="temaConsulta">
+  </div>
+
+  <div class="form-group">
+    <label for="descripcionConsulta">Descripción de la consulta</label>
+    <textarea id="descripcionConsulta" class="form-control" required
+              [(ngModel)]="solicitud.descripcionConsulta" name="descripcionConsulta"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Guardar cambios</button>
+  <button type="button" class="btn btn-secondary" (click)="cancelarEdicion()">Cancelar</button>
+</form>

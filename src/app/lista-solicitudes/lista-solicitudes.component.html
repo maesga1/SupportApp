@@ -1,0 +1,19 @@
+<h1>Lista de solicitudes</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre del solicitante</th>
+      <th>Fecha de la solicitud</th>
+      <th>Tema de la consulta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let solicitud of solicitudes">
+      <td>{{ solicitud.nombreSolicitante }}</td>
+      <td>{{ solicitud.fechaSolicitud }}</td>
+      <td>{{ solicitud.temaConsulta }}</td>
+    </tr>
+  </tbody>
+</table>
+
