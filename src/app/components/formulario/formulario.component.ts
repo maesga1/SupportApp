@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class FormularioComponent {
   formData = {
+    id: '',
     nombre: '',
     fecha: '',
     tema: '',
@@ -15,7 +16,7 @@ export class FormularioComponent {
 
   temas = ['Software', 'Hardware', 'Soporte'];
 
-  submitForm() {
+  submitForm(): void {
     console.log(this.formData);
   }
 }

@@ -1,0 +1,25 @@
+<div>
+  <h1>Lista de Solicitudes</h1>
+  <div *ngIf="solicitudes.length === 0">
+    <p>No hay solicitudes registradas.</p>
+  </div>
+  <ul *ngIf="solicitudes.length > 0">
+    <li *ngFor="let solicitud of solicitudes">
+      <div>
+        <strong>Nombre:</strong> {{ solicitud.nombre }}
+      </div>
+      <div>
+        <strong>Fecha:</strong> {{ solicitud.fecha }}
+      </div>
+      <div>
+        <strong>Tema:</strong> {{ solicitud.tema }}
+      </div>
+      <div>
+        <strong>Descripción:</strong> {{ solicitud.descripcion }}
+      </div>
+      <div>
+        <!-- <button (click)="editSolicitud(solicitud.id)">Editar</button> -->
+      </div>
+    </li>
+  </ul>
+</div>
