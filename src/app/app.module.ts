@@ -8,14 +8,12 @@ import { ListasolicitudesComponent } from './components/listasolicitudes/listaso
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RequestsListComponent } from './components/request-list/request-list.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RequestsListComponent,
     FormularioComponent,
     ListasolicitudesComponent,
   ],
@@ -23,8 +21,6 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule
-    
-
   ],
   providers: [],
   bootstrap: [AppComponent]
