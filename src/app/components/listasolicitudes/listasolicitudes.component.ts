@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./listasolicitudes.component.scss']
 })
 export class ListasolicitudesComponent {
+  solicitudes: any[] = []; // Array para almacenar las solicitudes
 
+  agregarSolicitud(formData: any) {
+    this.solicitudes.push(formData); // Agregar la solicitud al array
+  }
 }
