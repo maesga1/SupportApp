@@ -9,6 +9,7 @@ import { ListasolicitudesComponent } from './components/listasolicitudes/listaso
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { EdicionSolicitudComponent } from './components/edicion-solicitud/edicion-solicitud.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     AppComponent,
     FormularioComponent,
     ListasolicitudesComponent,
+    EdicionSolicitudComponent,
   ],
   imports: [
     BrowserModule,
