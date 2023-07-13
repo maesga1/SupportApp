@@ -23,8 +23,6 @@ import { EdicionSolicitudComponent } from './components/edicion-solicitud/edicio
     BrowserModule,
     AppRoutingModule,
     FormsModule
-    
-
   ],
   providers: [],
   bootstrap: [AppComponent]
