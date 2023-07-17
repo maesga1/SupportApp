@@ -19,11 +19,11 @@ public class SolicitudController {
     }
 
     @PostMapping("/solicitudes")
-    public void añadirListaSolicutides(@RequestBody Solicitud solicitud) {
-        solicitudService.addSolicitud(solicitud);
+    public Solicitud añadirSolicitud(@RequestBody Solicitud solicitud) {
+        return solicitudService.addSolicitud(solicitud);
     }
 
-    @PostMapping("/solicitudes")
+    @PutMapping("/solicitudes")
     public Solicitud editarSolictud(@RequestBody Solicitud solicitud) {
         return solicitudService.editarSolictud(solicitud);
     }

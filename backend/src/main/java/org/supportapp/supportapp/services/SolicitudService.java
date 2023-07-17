@@ -17,12 +17,11 @@ public class SolicitudService {
         return solicitudRepository.findAll();
     }
 
-    public void addSolicitud(Solicitud solicitud) {
-        solicitudRepository.save(solicitud);
+    public Solicitud addSolicitud(Solicitud solicitud) {
+        return solicitudRepository.save(solicitud);
     }
 
     public Solicitud editarSolictud(Solicitud solicitud) {
-        solicitudRepository.delete(solicitud);
         return solicitudRepository.save(solicitud);
     }
 
