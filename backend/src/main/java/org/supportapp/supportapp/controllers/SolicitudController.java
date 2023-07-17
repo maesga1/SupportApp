@@ -1,25 +1,30 @@
 package org.supportapp.supportapp.controllers;
+
 import org.springframework.web.bind.annotation.*;
 import org.supportapp.supportapp.models.Solicitud;
+import org.supportapp.supportapp.services.SolicitudService;
 
-import java.util.ArrayList;
 import java.util.List;
+import org.springframework.web.bind.annotation.RequestBody;
+
 @RestController
-@RequestMapping("/solicitudes")
-
+@CrossOrigin(origins = "http://localhost/4200")
 public class SolicitudController {
-    private List<Solicitud> solicitudes = new ArrayList<>();
 
-    @GetMapping
+    SolicitudService solicitudService;
+
+    @GetMapping("/solicitudes")
     public List<Solicitud> obtenerSolicitudes() {
-        return solicitudes;
+        return solicitudService.getSolicitudes();
     }
 
-    @PostMapping
-    public Solicitud crearSolicitud(@RequestBody Solicitud solicitud) {
-        solicitudes.add(solicitud);
-        return solicitud;
+    @PostMapping("/solicitudes")
+    public void añadirListaSolicutides(@RequestBody Solicitud solicitud) {
+        solicitudService.addSolicitud(solicitud);
+    }
+
+    @PostMapping("/solicitudes")
+    public Solicitud editarSolictud(@RequestBody Solicitud solicitud) {
+        return solicitudService.editarSolictud(solicitud);
     }
 }
-    
-
