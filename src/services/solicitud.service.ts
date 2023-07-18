@@ -8,7 +8,7 @@ import { Solicitud } from '../models/solicitud.model';
   providedIn: 'root'
 })
 export class SolicitudService {
-  private apiUrl = 'api/solicitudes'; 
+  private apiUrl = '/api/solicitudes'; 
 
   constructor(private http: HttpClient) {}
 
@@ -21,5 +21,12 @@ export class SolicitudService {
     const url = `${this.apiUrl}/${solicitud.id}`;
     return this.http.put<Solicitud>(url, solicitud);
   }
+
+  crearSolicitud(solicitud:Solicitud): Observable<Solicitud> {
+    const url= `${this.apiUrl}`
+    return this.http.post<Solicitud>(url, solicitud);
+  }
+
+
 
 }
