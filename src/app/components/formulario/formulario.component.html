@@ -1,27 +1,26 @@
-<form (ngSubmit)="submitForm()">
-    <div>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" [(ngModel)]="formData.nombre" required>
-    </div>
-  
-    <div>
-      <label for="fecha">Fecha:</label>
-      <input type="date" id="fecha" name="fecha" [(ngModel)]="formData.fecha" required>
-    </div>
-  
-    <div>
-      <label for="tema">Tema:</label>
-      <select id="tema" name="tema" [(ngModel)]="formData.tema" required>
-        <option value="" disabled selected>Seleccione un tema</option>
-        <option *ngFor="let tema of temas" [value]="tema">{{ tema }}</option>
-      </select>
-    </div>
-  
-    <div>
-      <label for="descripcion">Descripción:</label>
-      <textarea id="descripcion" name="descripcion" [(ngModel)]="formData.descripcion" required></textarea>
-    </div>
-  
-    <button type="submit">Enviar</button>
-  </form>
-  
+<form (ngSubmit)="submitForm()" class="modern-form">
+  <div class="form-group">
+    <label for="nombre"></label>
+    <input type="text" id="nombre" placeholder="Nombre" [(ngModel)]="formData.nombre" required>
+  </div>
+
+  <div class="form-group">
+    <label for="fecha"></label>
+    <input type="date" placeholder="Fecha" id="fecha" name="fecha" [(ngModel)]="formData.fecha" required>
+  </div>
+
+  <div class="form-group">
+    <label for="tema"></label>
+    <select id="tema" name="tema" [(ngModel)]="formData.tema" required>
+      <option value="" disabled selected>Seleccione un tema</option>
+      <option *ngFor="let tema of temas" [value]="tema">{{ tema }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="descripcion"></label>
+    <textarea placeholder="Descripción" id="descripcion" name="descripcion" [(ngModel)]="formData.descripcion" required></textarea>
+  </div>
+
+  <button type="submit" class="btn-submit">Enviar</button>
+</form>
